@@ -186,7 +186,6 @@ img {
 .section-hero {
   max-width: 1440px;
   margin: 0 auto;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   padding: 188px 0 188px 0;
@@ -199,7 +198,7 @@ img {
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 
   background-color: var(--main-text-color);
 }
@@ -253,7 +252,29 @@ img {
 .feature-list {
   list-style: none;
   display: flex;
+  justify-content: center;
   margin-bottom: 120px;
+}
+
+.feature-list-item {
+  max-width: 264px;
+  padding: auto;
+  margin-right: 24px;
+}
+
+.feature-list-item:last-child {
+  margin-right: 0;
+}
+
+.icon-card {
+  height: 112px;
+  width: 264px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color-button-portfolio);
+  margin-bottom: 8px;
 }
 
 .visually-hidden.title {
@@ -261,41 +282,7 @@ img {
   margin-bottom: 120px;
 }
 
-.feature-list-item::before {
-  display: block;
-  content: "";
-  height: 112px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: center;
-  background-color: var(--background-color-button-portfolio);
-  margin-bottom: 8px;
-}
-
-.icon-strategy::before {
-  background-image: url(../images/antenna.svg);
-}
-
-.icon-punctuality::before {
-  background-image: url(../images/astronaut.svg);
-}
-
-.icon-diligence::before {
-  background-image: url(../images/clock.svg);
-}
-
-.icon-technologies::before {
-  background-image: url(../images/diagram.svg);
-}
-
-.feature-list-item {
-  padding: auto;
-  margin-right: 24px;
-  min-width: 264px;
-}
-
-.feature-list-item:last-child {
-  margin-right: 0;
+.feature-card {
 }
 
 /* Examples */
@@ -402,10 +389,19 @@ img {
   justify-content: center;
   align-items: center;
   background-color: var(--accent-color);
+  cursor: pointer;
 }
 
 .specialists-icon {
   fill: var(--background-color-button-portfolio);
+}
+
+.specialists-link:is(:hover, :focus) {
+  background-color: #404bbf;
+}
+
+.specialists-link:is(:hover, :focus) .specialists-icon {
+  fill: #404bbf;
 }
 
 /* Customers */
@@ -474,12 +470,8 @@ img {
 }
 
 .footer-logo {
-  padding-top: 100px;
   width: 264px;
-}
-
-.footer-link {
-  width: 208px;
+  margin-right: 120px;
 }
 
 .section-text {
@@ -509,21 +501,29 @@ img {
 }
 
 .footer-item {
-  display: flex;
-  justify-content: center;
 }
 
 .footer-link {
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
   width: 40px;
   height: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 
 .footer-icon {
+  fill: var(--background-color-button-portfolio);
+}
+
+.footer-link:is(:hover, :focus) {
+  border-color: #31d0aa;
+}
+
+.footer-link:is(:hover, :focus) .footer-icon {
+  fill: #31d0aa;
 }
 
 /* Button */
