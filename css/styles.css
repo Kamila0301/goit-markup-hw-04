@@ -519,7 +519,7 @@ img {
 }
 
 .footer-link:is(:hover, :focus) {
-  border-color: #31d0aa;
+  background-color: #31d0aa;
 }
 
 .footer-link:is(:hover, :focus) .footer-icon {
